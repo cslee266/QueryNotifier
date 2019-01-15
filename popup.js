@@ -15,6 +15,7 @@ onkeydown = onkeyup = function(e) {
 }
 
 function run(){
+    // Check every 1000 millisecond
     isDone = window.setInterval(checkIfTabPaneActive, 1000);
     // console.log('isDone',isDone);
 }
@@ -35,7 +36,6 @@ function checkIfTabPaneActive(){
 		console.log('Wrong Website');
 
 	}
-
 
 }
 
