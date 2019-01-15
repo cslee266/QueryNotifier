@@ -30,5 +30,6 @@ chrome.runtime.onMessage.addListener(
 chrome.notifications.onClicked.addListener(function(notificationId, byUser) {
     // console.log(tabid);
     chrome.tabs.update(tabid, {active: true});
+    chrome.notifications.clear(notificationId, callBack);
     // chrome.tabs.sendMessage(tabid, "callmeback", function(response) {});
 });
