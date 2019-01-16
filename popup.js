@@ -15,9 +15,15 @@ onkeydown = onkeyup = function(e) {
 }
 
 function run(){
-    // Check every 1000 millisecond
-    isDone = window.setInterval(checkIfTabPaneActive, 1000);
-    // console.log('isDone',isDone);
+    
+    var result = document.getElementById('queryResults').className;
+    // If result exists before running a query, exit the funcion
+    if (result == 'tab-pane active'){return;}
+    // Else check if tab pane is active every second
+    else {
+        // Check every 1000 millisecond
+        isDone = window.setInterval(checkIfTabPaneActive, 1000);
+    }
 }
 
 function checkIfTabPaneActive(){
